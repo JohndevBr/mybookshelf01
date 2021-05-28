@@ -67,11 +67,10 @@ export const Container = styled.section`
     }
   }
 
-    
 
 `
 
-/* export const Content = styled.main`
+export const Content = styled.main`
     ul {
         margin-top: 2rem;
         display: grid;
@@ -86,18 +85,24 @@ export const Container = styled.section`
         gap: 1rem;
         justify-items: center;
         align-items: center;
+        background-color: rgba(242, 196, 56, 0.1);
 
-        border: 0.25rem solid var(--background) ;
+        border: 0.25rem solid rgba(255, 255, 255, 0.3);
         padding: 1rem;
         border-radius: 2rem;
-
+        margin:1rem;
 
         cursor: pointer;
+        transform: border 0.2s;
+
+        :hover {
+            border: 0.25rem solid rgba(255, 255, 255, 0.9);
+        }
 
         .ImageBook {
             img {
-                width: 3rem;
-                height: 3rem;
+                width: 5rem;
+                height: 5rem;
             }
         }
 
@@ -108,4 +113,3 @@ export const Container = styled.section`
     }
         
 `
-*/
