@@ -1,6 +1,6 @@
 import { Container } from './styles'
 
-export function Header() {
+export default function Header() {
     return (
       <Container>
             <h1> <span>my</span> Book<span>shelf</span> </h1>

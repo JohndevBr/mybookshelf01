@@ -5,7 +5,7 @@ import { Container } from './styles'
 import axios from 'axios'
 
 
-export function FindBook () {
+export default function FindBook () {
     const [book, setBook] = useState('')
     const [ result, setResult] = useState([])
 
