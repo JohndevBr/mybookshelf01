@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { FiSearch } from 'react-icons/fi'
 import { Container } from './styles'
 
-import axios from 'axios'
+import api from '../../services/api'
 
 
 export default function FindBook () {
@@ -18,9 +18,9 @@ export default function FindBook () {
     function handleSubmit(event){
         event.preventDefault()
 
-        axios.get('https://www.googleapis.com/books/v1/volumes?q=flowers+inauthor:keyes&key=AIzaSyAus8q7Wr92etcjgDB_MvOzblDcRvxnO4M')
+        api.get(`${book}+inauthor`)
         .then( data => {
-            console.log(data)
+            console.log(data.data.items)
         })
     }
 
