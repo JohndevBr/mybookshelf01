@@ -34,10 +34,10 @@ export default function FindBook () {
         setisFavorite(true)
     }
 
-    function handleSubmit(event){
+     async function handleSubmit(event){
         event.preventDefault()
 
-        api.get(`${book}+inauthor`)
+        await api.get(`${book}+intitle`)
         .then( data => {
             console.log(data.data.items)
             setResult(data.data.items, isFavorite)
@@ -74,7 +74,7 @@ export default function FindBook () {
                                         onRequestClose={handleCloseDescriptionModal}
                                     >   
                                         <div className="Modal-content">
-                                            <img src={ book.volumeInfo.imageLinks?.thumbnail } alt={book.volumeInfo.title} />
+                                            <img src={ book.volumeInfo.imageLinks?.smallThumbnail } alt={book.volumeInfo.title} />
                                             <h2>Descrição do livro { book.volumeInfo.title }</h2>
                                             <p> { book.volumeInfo.description } </p>
                                         </div>
@@ -83,7 +83,7 @@ export default function FindBook () {
                                     <section>
                                     <div className="ImageBook">
                                     <MdFavorite className="heart-icon" size={32} onClick={handleSetFavorite} />
-                                    <img src={ book.volumeInfo.imageLinks.thumbnail } alt={book.volumeInfo.title} />
+                                    <img src={ book.volumeInfo.imageLinks?.smallThumbnail } alt={book.volumeInfo.title} />
                                     </div>
                                     <div className="ContentBook">
                                         <h2> { book.volumeInfo.title } </h2>
