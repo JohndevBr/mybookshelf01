@@ -58,11 +58,6 @@ export const Container = styled.section`
             align-items: center;
 
             padding: 14px;
-            transition: filter 0.2s;
-
-            &:hover {
-            filter: brightness(0.85);
-            }
         }
     }
   }
@@ -79,7 +74,13 @@ export const Content = styled.main`
         justify-items: center;
     }
 
-    li {
+    .Modal-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
@@ -93,23 +94,39 @@ export const Content = styled.main`
         margin:1rem;
 
         cursor: pointer;
-        transform: border 0.2s;
 
         :hover {
-            border: 0.25rem solid rgba(255, 255, 255, 0.9);
-        }
+            border: 0.25rem solid rgba(255, 255, 255, 0.9);;
+                }
 
-        .ImageBook {
+        .ImageBook{ 
+            position: relative;
+
+            .heart-icon {
+                position: absolute;
+                top: -5px;
+                cursor: pointer;
+                transform: color 0.2s;
+
+                :hover {
+                    color: rgba(255, 99, 71, 0.9);
+                }
+            }
+
             img {
-                width: 5rem;
-                height: 5rem;
+                margin-top: 3rem;
             }
         }
 
         .ContentBook {
             margin-bottom: 1rem;
-            
+            h2 {
+                font-size: 0.95rem;
+            }            
         }
     }
+
+    
+   
         
 `
