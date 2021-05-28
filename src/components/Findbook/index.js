@@ -24,11 +24,6 @@ export default function FindBook () {
     const [book, setBook] = useState('')
     const [ result, setResult] = useState([])
     const [ isFavorite, setisFavorite] = useState(false)
-    function handleChange(event){
-        const book = event.target.value
-
-        setBook(book)
-    }
 
     function handleSetFavorite() {
         setisFavorite(true)
@@ -41,7 +36,10 @@ export default function FindBook () {
         .then( data => {
             console.log(data.data.items)
             setResult(data.data.items, isFavorite)
+
+            setBook('')  
         })
+        
     }
 
     return (
@@ -54,7 +52,8 @@ export default function FindBook () {
                 <input 
                     type="text" 
                     placeholder="Qual livro ler hoje?"
-                    onChange={handleChange}
+                    onChange={(e) => setBook(e.target.value)}
+                    value={book}
                 />
                 <button type="submit" onClick={handleSubmit}>
                     <FiSearch size={16} color="#fff"/>
