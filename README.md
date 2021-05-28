@@ -1,9 +1,6 @@
 ## My Bookshelf
 
 
-  <img alt="Frontend" src=".github/appPhoto.png" width="100%">
-
-
 My bookshelf is an application that consumes the Googleboks API, where you can search for a book and save it as a favorite
 
 ## Test
