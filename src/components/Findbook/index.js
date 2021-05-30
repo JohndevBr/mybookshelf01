@@ -32,7 +32,7 @@ export default function FindBook () {
      async function handleSubmit(event){
         event.preventDefault()
 
-        await api.get(`${book}+intitle`)
+        await api.get(`${book}`)
         .then( data => {
             console.log(data.data.items)
             setResult(data.data.items, isFavorite)
@@ -86,7 +86,7 @@ export default function FindBook () {
                                     </div>
                                     <div className="ContentBook">
                                         <h2> { book.volumeInfo.title } </h2>
-                                        <h4> { book.volumeInfo.publishedDate } </h4>
+                                        <h4> { book.volumeInfo?.publishedDate } </h4>
                                     </div>
                                     </section>
                                 </li>
