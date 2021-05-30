@@ -154,7 +154,9 @@ export const ContentModal = styled.div `
     }
 
     p {
+        font-weight: normal;
         text-align: center;
+        font-size: 0.8rem;
     }
 `
   

@@ -79,11 +79,11 @@ export default function FindBook() {
                                     <MdFavorite className="heart-icon" size={32} onClick={handleSetFavorite} />
                                     <img
                                         src={book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.smallThumbnail : bookLogo}
-                                        alt={book.volumeInfo.title}
+                                        alt={book.volumeInfo?.title}
                                     />
                                 </div>
                                 <div className="ContentBook">
-                                    <h2> {book.volumeInfo.title} </h2>
+                                    <h2> {book.volumeInfo?.title} </h2>
                                     <h4> {book.volumeInfo?.publishedDate} </h4>
                                 </div>
                             </section>
@@ -111,7 +111,7 @@ export default function FindBook() {
 
                     <span>{modalBook.volumeInfo?.title}</span>
 
-                    <p> { modalBook.volumeInfo ? modalBook.volumeInfo?.description : "Descrição não disponível"} </p>
+                    <p> { modalBook.volumeInfo?.description } </p>
 
                     <button
                         type="button"
