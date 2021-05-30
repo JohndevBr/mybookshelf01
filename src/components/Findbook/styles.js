@@ -72,59 +72,72 @@ export const Content = styled.main`
         grid-template-columns: repeat(3, 1fr);
         list-style: none;
         justify-items: center;
+        gap: 0.5rem;
     }
 
-    .Modal-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    li {
 
-    section {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        justify-items: center;
-        align-items: center;
-        background-color: rgba(242, 196, 56, 0.1);
+        width: 30rem;
+        height: 20rem;
+        max-height: 25rem;
 
-        border: 0.25rem solid rgba(255, 255, 255, 0.3);
-        padding: 1rem;
-        border-radius: 2rem;
-        margin:1rem;
+        .Modal-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-        cursor: pointer;
+        section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            justify-items: center;
+            align-items: center;
+            background-color: #fff;
 
-        :hover {
-            border: 0.25rem solid rgba(255, 255, 255, 0.9);;
+
+            border: 0.25rem solid rgba(242, 196, 56, 0.3);
+            padding: 1rem;
+            border-radius: 2rem;
+            margin:1rem;
+
+            cursor: pointer;
+
+            :hover {
+                border: 0.25rem solid rgba(242, 196, 56, 0.9);
+                    }
+
+            .ImageBook{ 
+                position: relative;
+
+                .heart-icon {
+                    position: absolute;
+                    top: -5px;
+                    cursor: pointer;
+                    transform: color 0.2s;
+
+                    :hover {
+                        color: rgba(255, 99, 71, 0.9);
+                    }
                 }
 
-        .ImageBook{ 
-            position: relative;
-
-            .heart-icon {
-                position: absolute;
-                top: -5px;
-                cursor: pointer;
-                transform: color 0.2s;
-
-                :hover {
-                    color: rgba(255, 99, 71, 0.9);
+                img {
+                    margin-top: 3rem;
+                    width: 9rem;
                 }
             }
 
-            img {
-                margin-top: 3rem;
+            .ContentBook {
+                margin-bottom: 1rem;
+                h2 {
+                    font-size: 0.95rem;
+                }            
             }
         }
-
-        .ContentBook {
-            margin-bottom: 1rem;
-            h2 {
-                font-size: 0.95rem;
-            }            
-        }
+        
     }
+
+    
 
     
    

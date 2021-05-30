@@ -71,6 +71,7 @@ export default function FindBook () {
                                     <Modal 
                                         isOpen={isDescriptionModalOpen} 
                                         onRequestClose={handleCloseDescriptionModal}
+                                        
                                     >   
                                         <div className="Modal-content">
                                             <img src={ book.volumeInfo.imageLinks?.smallThumbnail } alt={book.volumeInfo.title} />
