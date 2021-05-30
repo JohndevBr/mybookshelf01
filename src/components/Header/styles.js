@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.main`
 
-    background: #718096;
+    background: var(--blue-50);
     padding-top: 2rem;
   
     h1 {

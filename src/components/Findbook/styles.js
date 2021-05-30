@@ -20,7 +20,7 @@ export const Container = styled.section`
         color: var(--text-title);
         font-size: 2.25rem;
             span {
-                color: #f7a203;
+                color: var(--yellow);
             }
         }
 
@@ -51,7 +51,7 @@ export const Container = styled.section`
             font-weight: 600;
             border-radius: 8px;
             border: 0;
-            background: #f7a203;
+            background: var(--yellow);
             color: #fff;
             display: flex;
             flex-direction: row;
@@ -72,29 +72,25 @@ export const Content = styled.main`
         grid-template-columns: repeat(3, 1fr);
         list-style: none;
         justify-items: center;
-        gap: 0.5rem;
+        gap: 0.2rem;
     }
 
     li {
 
-        width: 30rem;
-        height: 20rem;
-        max-height: 100%;
+        width: 100%;
+        height: 100%;
+        max-height: 20rem;
+        max-width: 20rem;
         margin-bottom: 0.25rem;
-
-        .Modal-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
 
         section {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 1rem;
-            justify-items: center;
+            justify-items: space-between;
             align-items: center;
             background-color: #fff;
+            
 
 
             border: 0.25rem solid rgba(242, 196, 56, 0.3);
@@ -104,7 +100,7 @@ export const Content = styled.main`
 
             cursor: pointer;
 
-            :hover {
+            &:hover {
                 border: 0.25rem solid rgba(242, 196, 56, 0.9);
                     }
 
@@ -117,14 +113,14 @@ export const Content = styled.main`
                     cursor: pointer;
                     transform: color 0.2s;
 
-                    :hover {
+                    &:hover {
                         color: rgba(255, 99, 71, 0.9);
                     }
                 }
 
                 img {
                     margin-top: 3rem;
-                    width: 9rem;
+                    width: 7rem;
                 }
             }
 
@@ -137,10 +133,30 @@ export const Content = styled.main`
         }
         
     }
-
-    
-
-    
-   
-        
+            
 `
+export const ContentModal = styled.div `
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h2 {
+        font-weight: normal;
+        margin-bottom: 1rem;
+        color: var(--text-title);
+    }
+
+    span {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        text-align: center;
+    }
+`
+  
+    
+
