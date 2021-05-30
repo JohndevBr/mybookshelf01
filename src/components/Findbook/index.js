@@ -5,7 +5,9 @@ import Modal from 'react-modal'
 
 
 
+
 import { Container, Content } from './styles'
+import bookLogo from '../../assets/book.svg'
 
 import api from '../../services/api'
 
@@ -74,7 +76,7 @@ export default function FindBook () {
                                         
                                     >   
                                         <div className="Modal-content">
-                                            <img src={ book.volumeInfo.imageLinks?.smallThumbnail } alt={book.volumeInfo.title} />
+                                            <img src={ book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.smallThumbnail : bookLogo } alt={book.volumeInfo.title} />
                                             <h2>Descrição do livro { book.volumeInfo.title }</h2>
                                             <p> { book.volumeInfo.description } </p>
                                         </div>
@@ -82,8 +84,11 @@ export default function FindBook () {
                                     </Modal>
                                     <section>
                                     <div className="ImageBook">
-                                    <MdFavorite className="heart-icon" size={32} onClick={handleSetFavorite} />
-                                    <img src={ book.volumeInfo.imageLinks?.smallThumbnail } alt={book.volumeInfo.title} />
+                                        <MdFavorite className="heart-icon" size={32} onClick={handleSetFavorite} />
+                                        <img 
+                                            src={ book.volumeInfo.imageLinks ? book.volumeInfo.imageLinks.smallThumbnail : bookLogo } 
+                                            alt={book.volumeInfo.title} 
+                                        />
                                     </div>
                                     <div className="ContentBook">
                                         <h2> { book.volumeInfo.title } </h2>

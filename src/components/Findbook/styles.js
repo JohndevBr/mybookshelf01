@@ -79,7 +79,8 @@ export const Content = styled.main`
 
         width: 30rem;
         height: 20rem;
-        max-height: 25rem;
+        max-height: 100%;
+        margin-bottom: 0.25rem;
 
         .Modal-content {
             display: flex;
